@@ -10,6 +10,9 @@ $('#form_interno').on('shown.bs.modal', function (e) {
                 $('.debug_selector').append('<input data-select_elemento="div" id="debug_div" class="debugs_selectors" type="checkbox" name="debug_div" value="debug_div"> Mostrar IDS de los DIVS<br>');
                 // Tabs
                 $('.debug_selector').append('<input data-select_elemento="button" id="debug_button" class="debugs_selectors" type="checkbox" name="debug_button" value="debug_button"> Mostrar IDS de los BOTONES<br>');
+                $('.debug_selector').append('<input data-select_elemento="input" id="debug_button" class="quitar_disable" type="checkbox" name="debug_button" value="debug_button"> Quitar DISABLED<br>');
+
+    
             };
 
             agregar_div_selector();
@@ -41,8 +44,13 @@ $('#form_interno').on('shown.bs.modal', function (e) {
                     destruir_ids_elemento(data_elemento);
                 }
             });
-           
+  
+           $('input.quitar_disable').change(function() {
+                $('[disabled]').removeAttr('disabled');
+            });
 
+  
+  
 })    
 $('#form_interno').on('hidden.bs.modal', function (e) {
    $('#debug_selector').hide();
