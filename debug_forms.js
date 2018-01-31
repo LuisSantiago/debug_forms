@@ -48,6 +48,7 @@ $('#form_interno').on('shown.bs.modal', function (e) {
   
            $('input.quitar_disable').change(function() {
                 $('[disabled]').removeAttr('disabled');
+                $('.disabledTab').removeClass('.disabledTab');
                 console.log('se quitan los disableds');
             });
 
