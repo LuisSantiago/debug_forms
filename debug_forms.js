@@ -11,7 +11,7 @@ $('#form_interno').on('shown.bs.modal', function (e) {
                 // Tabs
                 $('.debug_selector').append('<input data-select_elemento="button" id="debug_button" class="debugs_selectors" type="checkbox" name="debug_button" value="debug_button"> Mostrar IDS de los BOTONES<br>');
                 // Tabs
-                $('.debug_selector').append('<input data-select_elemento="input" id="debug_disabled" class="quitar_disable" type="checkbox" name="debug_disabled" value="debug_disabled"> Quitar DISABLED<br>');
+                $('.debug_selector').append('<input class="quitar_disable" type="checkbox" value="debug_disabled"> Quitar DISABLED<br>');
 
     
             };
@@ -48,6 +48,7 @@ $('#form_interno').on('shown.bs.modal', function (e) {
   
            $('input.quitar_disable').change(function() {
                 $('[disabled]').removeAttr('disabled');
+                console.log('se quitan los disableds');
             });
 
   
