@@ -1,8 +1,16 @@
+
+
+$(function(){
+
+$('body').append("<div style='z-index:999999999999; position:fixed; bottom:0px; left:0px;'>Quitar_Aviso</div>");
+
 if(($("#avisoNoAutorizado").data('bs.modal') || {}).isShown != undefined){
 		$('.modal-backdrop.fade.in').remove();
 		$('#avisoNoAutorizado').remove();
+		console.log('tiene aviso');
 }
 
+});
 $('#form_interno').on('shown.bs.modal', function (e) {
 			function agregar_div_selector(){
                  $('#debug_selector').remove();
