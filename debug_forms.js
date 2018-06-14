@@ -1,5 +1,7 @@
+$('body').append('<div>Quitar aviso</div>');
+
 $('#form_interno').on('shown.bs.modal', function (e) {
-  function agregar_div_selector(){
+			function agregar_div_selector(){
                  $('#debug_selector').remove();
                 $('body').append('<div id="debug_selector" class="debug_selector" style="padding:10px; position: absolute; right:0px; bottom:0px; font-size:12px; background-color: #0284A8; color:#fff; display: block; z-index:999999" id="debug_selector" type="text"></div>');
                 // Inputs
@@ -60,6 +62,12 @@ $('#form_interno').on('hidden.bs.modal', function (e) {
         
    function destruir_ids_elemento(elemento){
            $('input[data-elemento='+elemento+']').remove();
+   }
+   
+   
+   function destruir_sinacceso(){
+		$('.modal-backdrop.fade.in').remove();
+		$('#avisoNoAutorizado').remove();
    }
     
     var data_elemento = $(this).data("select_elemento");
