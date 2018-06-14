@@ -1,4 +1,4 @@
-$('#form_interno').on('shown.bs.modal', function (e) {
+$('#avisoNoAutorizado').on('shown.bs.modal', function (e) {
 	destruir_sinacceso();
 });
 $('#form_interno').on('shown.bs.modal', function (e) {
