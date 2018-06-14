@@ -2,12 +2,15 @@
 
 $(function(){
 
-$('body').append("<div style='z-index:999999999999; position:fixed; bottom:0px; left:0px;'>Quitar_Aviso</div>");
 
 if(($("#avisoNoAutorizado").data('bs.modal') || {}).isShown != undefined){
-		$('.modal-backdrop.fade.in').remove();
-		$('#avisoNoAutorizado').remove();
-		console.log('tiene aviso');
+
+		$('body').append("<div style='z-index:999999999999; position:fixed; bottom:0px; left:0px; padding: 10px; background-color:#000; color:#fff;' id='quitar_aviso'>Quitar_Aviso</div>");
+		
+        $('#quitar_aviso').click(function(){
+			$('.modal-backdrop.fade.in').remove();
+			$('#avisoNoAutorizado').remove();			
+        })		
 }
 
 });
