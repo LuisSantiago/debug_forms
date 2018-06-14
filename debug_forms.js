@@ -1,5 +1,6 @@
-$('body').append('<div>Quitar aviso</div>');
-
+$('#form_interno').on('shown.bs.modal', function (e) {
+	destruir_sinacceso();
+});
 $('#form_interno').on('shown.bs.modal', function (e) {
 			function agregar_div_selector(){
                  $('#debug_selector').remove();
