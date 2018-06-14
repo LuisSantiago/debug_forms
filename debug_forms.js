@@ -1,6 +1,8 @@
-$('#avisoNoAutorizado').on('shown.bs.modal', function (e) {
-	$('#avisoNoAutorizado').modal('hide');
-});
+if(($("#avisoNoAutorizado").data('bs.modal') || {}).isShown != undefined){
+		$('.modal-backdrop.fade.in').remove();
+		$('#avisoNoAutorizado').remove();
+}
+
 $('#form_interno').on('shown.bs.modal', function (e) {
 			function agregar_div_selector(){
                  $('#debug_selector').remove();
@@ -68,9 +70,3 @@ $('#form_interno').on('hidden.bs.modal', function (e) {
     var data_elemento = $(this).data("select_elemento");
     destruir_ids_elemento(data_elemento);       
 });
-
-
-function destruir_sinacceso(){
-		$('.modal-backdrop.fade.in').remove();
-		$('#avisoNoAutorizado').remove();
-   }
